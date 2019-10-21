@@ -39,3 +39,6 @@ LENGTH is not limited by a range.
 `waveforms.rest(LENGTH, BITRATE)`
 Generates a constant wave for a length of LENGTH seconds. BITRATE should match the BITRATE given to player.play() and player.save().
 LENGTH is not limited by a range.
+
+# Support
+Like what you see? Download [Brave](https://brave.com/dro635) and click on the little orange triangle.
