@@ -3,7 +3,7 @@ import pyaudio     # sound wave maker (sort of) and player
 import wave        # sound wave saver
 
 p = pyaudio.PyAudio()   #initialize pyaudio
-FORMAT = p.get_format_from_width(1, unsigned=True)
+FORMAT = p.get_format_from_width(1)
 #p.get_sample_size(p.get_format_from_width(1))
 
 def play(WAVEDATA, BITRATE):
@@ -11,7 +11,7 @@ def play(WAVEDATA, BITRATE):
                     channels = 1,
                     rate = BITRATE,
                     output = True)
-    stream.write(WAVEDATA)
+    stream.write(WAVEDATA.encode("ISO 8859-1"))
     stream.stop_stream()
     stream.close()
     p.terminate()
@@ -21,5 +21,5 @@ def save(WAVEDATA, BITRATE, CHANNELS):
     waveFile.setnchannels(CHANNELS) # Yes, but actually no.
     waveFile.setsampwidth(p.get_sample_size(FORMAT))
     waveFile.setframerate(BITRATE)
-    waveFile.writeframes(WAVEDATA.encode())
+    waveFile.writeframes(WAVEDATA.encode("ISO 8859-1"))
     waveFile.close()
