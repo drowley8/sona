@@ -41,4 +41,4 @@ Generates a constant wave for a length of LENGTH seconds. BITRATE should match t
 LENGTH is not limited by a range.
 
 # Support
-Like what you see? Download [Brave](https://brave.com/dro635) and click on the little orange triangle.
+Like what you see? Download [Brave](https://brave.com/dro635) and click on the little orange-purple triangle.
