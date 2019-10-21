@@ -3,8 +3,8 @@ Python-powered sound maker
 ## Prerequisites
 To install the required Python packages, run
 `pip install -r requirements.txt`
-PyAudio requires the package portaudio19-dev in order to build. Install it with
-`sudo apt install portaudio19-dev`
+
+For instructions on how to install PyAudio, go to its [website](https://people.csail.mit.edu/hubert/pyaudio/)
 
 ## Usage
 `python3 gensound.py`
@@ -30,7 +30,7 @@ This file uses math to generate sound waves in the form of byte data.
 Generates a sine wave at FREQUENCY hertz, LENGTH seconds, and AMP volume. BITRATE should match the BITRATE given to player.play() and player.save().
 The range for FREQUENCY is 20-20000.
 LENGTH is not limited by a range.
-The range for AMP is 0-63. At this time, AMP should not exceed 64.
+The range for AMP is 0-127. AMP should not exceed 128.
 
 `waveforms.noise(LENGTH, BITRATE)`
 Generates white noise for a length of LENGTH seconds. BITRATE should match the BITRATE given to player.play() and player.save().
